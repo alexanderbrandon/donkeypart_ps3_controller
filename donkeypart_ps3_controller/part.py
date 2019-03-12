@@ -532,7 +532,7 @@ class JoystickController(object):
         '''
         increase throttle scale setting
         '''
-        self.throttle_scale = round(min(1.0, self.throttle_scale + 0.01), 2)
+        self.throttle_scale = round(min(1.0, self.throttle_scale + 0.2), 2)
         if self.constant_throttle:
             self.throttle = self.throttle_scale
             self.on_throttle_changes()
@@ -543,7 +543,7 @@ class JoystickController(object):
         '''
         decrease throttle scale setting
         '''
-        self.throttle_scale = round(max(0.0, self.throttle_scale - 0.01), 2)
+        self.throttle_scale = round(max(0.0, self.throttle_scale - 0.2), 2)
         if self.constant_throttle:
             self.throttle = self.throttle_scale
             self.on_throttle_changes()
